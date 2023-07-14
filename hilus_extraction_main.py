@@ -152,6 +152,26 @@ for prep_date in next(os.walk('G:/HiWi/itbs/data'))[1]:
                 total_time = frames * time_res
 
                 """
+                Store the meta data which will be useful for further processing
+                """
+                results[prep_date][time][filename]['recording_metadata'] = {}
+
+                results[prep_date][time][filename]['recording_metadata']['x_dim'] = x_dim
+                results[prep_date][time][filename]['recording_metadata']['y_dim'] = y_dim
+
+                results[prep_date][time][filename]['recording_metadata']['x_resolution'] = x_resolution
+                results[prep_date][time][filename]['recording_metadata']['y_resolution'] = y_resolution
+
+                results[prep_date][time][filename]['recording_metadata']['channel0_name'] = channel0_name
+                results[prep_date][time][filename]['recording_metadata']['channel1_name'] = channel1_name
+
+                results[prep_date][time][filename]['recording_metadata']['time_res'] = time_res
+
+                results[prep_date][time][filename]['recording_metadata']['frames'] = frames
+
+                results[prep_date][time][filename]['recording_metadata']['total_time'] = total_time
+
+                """
                 data pre processing
                 """
 
